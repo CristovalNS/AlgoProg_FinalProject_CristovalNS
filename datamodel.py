@@ -3,6 +3,7 @@
 # Made by: Cristoval Neo Sasono
 # NIM: 2602158235
 
+
 class DataModel:
     """
     A class containing the functions to predict one or multiple students' scores using linear regression.
@@ -40,4 +41,3 @@ class DataModel:
     def predict_student_score(self, x):
         # y = mx + c
         return (self.m * x) + self.c
-

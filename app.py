@@ -8,20 +8,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 from datamodel import DataModel
-from fileconverter import FileConverter
+from excelfileconverter import ExcelFileConverter
 from PIL import Image
 
 # Run the app by typing into your terminal: 'streamlit run [Directory Path]'
 
 st.title("Student Mark Prediction")
-
 st.write("Upload an excel file with the content formatted as such as a starting dataset:")
 file_format_image = Image.open('file_format.png')
 st.image(file_format_image)
 
 
 # Add a file uploader widget to upload the Excel file containing the dataset used to train the datamodel.
-file_converter = FileConverter(".xlsx", ".csv")
+file_converter = ExcelFileConverter(".xlsx", ".csv")
 excel_dataset_file = st.file_uploader("Choose an Excel file as the dataset and insert it bellow", type=["xlsx", "xls"])
 csv_dataset_file = file_converter.convert_excel_to_csv_file(excel_dataset_file)
 
@@ -72,7 +71,7 @@ if csv_dataset_file:
     # Predict the score of a single student
     st.write("Predict the score of one student:")
 
-    # Get  input for student name and study hours
+    # Get input for student name and study hours
     st.write("Enter the student's name and their study hour: ")
     enter_student_name = st.text_input("Enter student name: ")
     enter_student_study_hours = st.text_input("Enter study hours: ")
@@ -99,6 +98,7 @@ if csv_dataset_file:
     excel_class_data_file = st.file_uploader("Choose an Excel file containing the data of a class of students' "
                                              "study hour and insert it bellow", type=["xlsx", "xls"])
     csv_class_data_file = file_converter.convert_excel_to_csv_file(excel_class_data_file)
+
     if st.button("Predict Multiple Students Scores"):
         if csv_class_data_file:
             # Read the data from the CSV file

@@ -7,7 +7,17 @@ import streamlit as st
 import pandas as pd
 
 
-class FileConverter:
+class ExcelFileConverter:
+    """
+    A class containing the function to convert Excel files into CSV files.
+
+    Attributes:
+        file_type_in: Excel file input
+        file_type_out: CSV file output
+
+    Methods:
+        convert_excel_to_csv_file: Converts Excel files into CSV files to be used by the DataModel class.
+    """
     def __init__(self, file_type_in, file_type_out):
         self.file_type_in = file_type_in
         self.file_type_out = file_type_out
