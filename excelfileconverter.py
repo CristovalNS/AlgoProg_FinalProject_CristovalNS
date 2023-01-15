@@ -18,6 +18,7 @@ class ExcelFileConverter:
     Methods:
         convert_excel_to_csv_file: Converts Excel files into CSV files to be used by the DataModel class.
     """
+
     def __init__(self, file_type_in, file_type_out):
         self.file_type_in = file_type_in
         self.file_type_out = file_type_out
