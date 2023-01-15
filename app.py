@@ -6,13 +6,11 @@ import pandas as pd
 from linear_regression import LinearRegression
 from PIL import Image
 
-#TODO: Remove after testing -> streamlit run /Users/cristovalneosasono/PycharmProjects/AlgoProg_Final_Project/app.py
-
 # Run the app by typing into your terminal: 'streamlit run [Directory Path]'
 
 st.title("Student Mark Prediction")
 
-st.write("Upload an excel file with the content formatted as such:")
+st.write("Upload an excel file with the content formatted as such as a starting dataset:")
 image = Image.open('file_format.png')
 st.image(image)
 
@@ -53,15 +51,6 @@ if file_uploader:
 
     # Result
     y_predres = model.predict(x)
-    st.write("=" * 88)
-    st.write("Here are the score prediction for your students: ")
-
-    for length in range(len(n)):
-        if y_predres[length] > 100:
-            result = 100.0
-            st.write(f"Student Name = {n[length]} | Predicted mark = {round(result, 2)}")
-        else:
-            st.write(f"Student Name = {n[length]} | Predicted mark = {round(y_predres[length], 2)}")
 
     st.write("=" * 88)
 
@@ -72,8 +61,8 @@ if file_uploader:
     plt.plot(x, y_predres, color='k')
 
     # Add labels and title
-    plt.xlabel('Hours')
-    plt.ylabel('Scores')
+    plt.xlabel('Study Hours')
+    plt.ylabel('Student Scores')
     plt.title('Linear Regression Model')
 
     # Plot result
@@ -154,3 +143,4 @@ if file_uploader:
                     st.write(f"Student Name = {n[length]} | Predicted mark = {round(y_class_predres[length], 2)}")
 
             st.write("=" * 88)
+

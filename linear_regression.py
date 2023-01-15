@@ -4,13 +4,13 @@ class LinearRegression:
     A Function used to predict a student's mark using LinearRegression.
 
     Attributes:
-        epochs (int):
-        learning_rate (float):
-        student_name (str)
+        epochs (int): Number of iterations for the algorithm to run.
+        learning_rate (float): Step size of the algorithm's updates to the model's parameters.
+        student_name (str): Name of the student.
 
     Methods:
-        fit:
-        predict:
+        fit: Trains the model by adjusting the parameters to minimize the cost function.
+        predict: Makes predictions based on the trained model by multiplying input by slope and adding y-intercept.
     """
 
     def __init__(self, epochs=1000, learning_rate=0.0001, student_name=str):
