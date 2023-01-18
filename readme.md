@@ -16,8 +16,8 @@ This project is made using the Python programming language. The main function/pu
 ## Documentation
 
 This project has been documented in a report and a video demonstrating how the program functions:
-1. PDF Report: https://drive.google.com/file/d/1jy3QbhiQdeAItZQGgASsaOm0k8PuUXg1/view?usp=sharing
-2. Video Demo: https://drive.google.com/file/d/18bOsID7Y3uAJyAtQ1GGSlbJe4ue0zcY-/view?usp=sharing
+1. PDF Report: Being revisioned (Should be available before or on Friday, 20 January 2023
+2. Video Demo: Being revisioned (Should be available before or on Friday, 20 January 2023
 
 (Note that the video might be unplayable through the browser, so download the video to watch it.)
 
